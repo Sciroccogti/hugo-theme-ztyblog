@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{.Site.LanguageCode}}">
+<html lang="{{ .Site.Language }}">
 
 <head>
     {{ partial "head.html" . }}
@@ -13,7 +13,8 @@
     {{ if not (eq .Params.Layout "search" ) }}
     {{ partial "footer.html" . }}
     {{ end }}
-    {{ partial "scripts.html" . }}
+
+    {{ partial "javascripts.html" . }}
 </body>
 
 </html>
