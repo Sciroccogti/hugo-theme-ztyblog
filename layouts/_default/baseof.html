@@ -5,16 +5,15 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="ready" id="page" data-gr-c-s-loaded="true">
+<body class="ready bg-site" id="page" data-gr-c-s-loaded="true">
     {{ partial "header.html" . }}
 
     {{ block "main" . }}{{ end }}
 
     {{ if not (eq .Params.Layout "search" ) }}
-    {{ partial "footer.html" . }}
+        {{ partial "footer.html" . }}
+        {{ partial "javascripts.html" . }}   
     {{ end }}
-
-    {{ partial "javascripts.html" . }}
 </body>
 
 </html>
